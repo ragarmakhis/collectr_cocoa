@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -11,6 +11,19 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="Fi2-w9-74K" customClass="CLRCollectrController">
+            <connections>
+                <outlet property="createTXTOnlyCheckBox" destination="Mxl-Yf-sHf" id="n4O-Fx-K78"/>
+                <outlet property="createTXTOnlyTextField" destination="d0a-wK-wOs" id="iqs-hI-6iH"/>
+                <outlet property="inputXMLTextField" destination="yrx-To-QIb" id="PHC-qk-MUA"/>
+                <outlet property="outlutLogTextView" destination="aL9-Da-3wH" id="Uwd-37-7Iq"/>
+                <outlet property="outputFolderTextField" destination="P93-B6-2tP" id="7HL-Gy-ccA"/>
+                <outlet property="outputTXTTextField" destination="zvB-LO-G47" id="vCA-Qz-YKm"/>
+                <outlet property="typeSourceTextField" destination="GVv-9J-ddQ" id="nxc-vK-rZE"/>
+                <outlet property="typeXMLTextField" destination="3Mq-Ak-7wK" id="2tI-Dq-BZA"/>
+                <outlet property="volumesTextField" destination="Q2Q-y5-NcR" id="isG-gB-8w1"/>
+            </connections>
+        </customObject>
         <customObject id="-3" userLabel="Application"/>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
@@ -656,16 +669,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="630" height="556"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" id="NB2-LH-fHc">
-                        <rect key="frame" x="549" y="232" width="67" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VpE-43-Rkd">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent">q</string>
-                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                        </buttonCell>
-                    </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Q2Q-y5-NcR">
                         <rect key="frame" x="152" y="515" width="435" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -684,6 +687,9 @@
                             <string key="keyEquivalent">v</string>
                             <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="volumesSelectDialog:" target="Fi2-w9-74K" id="Z8G-jp-x4Z"/>
+                        </connections>
                     </button>
                     <button id="Mxl-Yf-sHf">
                         <rect key="frame" x="18" y="278" width="123" height="18"/>
@@ -692,6 +698,9 @@
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="createTXTOnlyCheckBox:" target="Fi2-w9-74K" id="D9V-6N-dqE"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="Shn-Cg-Sh1">
                         <rect key="frame" x="14" y="232" width="82" height="32"/>
@@ -702,6 +711,9 @@
                             <string key="keyEquivalent">s</string>
                             <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="start:" target="Fi2-w9-74K" id="Zct-4x-8Zo"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="wa3-8P-eSY">
                         <rect key="frame" x="14" y="475" width="104" height="32"/>
@@ -712,6 +724,9 @@
                             <string key="keyEquivalent">i</string>
                             <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="inputXMLDialog:" target="Fi2-w9-74K" id="Ey5-iy-Ybz"/>
+                        </connections>
                     </button>
                     <popUpButton verticalHuggingPriority="750" id="sC0-MM-imh">
                         <rect key="frame" x="18" y="438" width="100" height="26"/>
@@ -726,6 +741,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="typeXMLSelect:" target="Fi2-w9-74K" id="YWt-aR-mHn"/>
+                        </connections>
                     </popUpButton>
                     <popUpButton verticalHuggingPriority="750" id="MvO-SJ-OUO">
                         <rect key="frame" x="18" y="407" width="100" height="26"/>
@@ -740,6 +758,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="typeSourceSelect:" target="Fi2-w9-74K" id="sdJ-vg-dMt"/>
+                        </connections>
                     </popUpButton>
                     <button verticalHuggingPriority="750" id="nNQ-a2-9T3">
                         <rect key="frame" x="14" y="368" width="118" height="32"/>
@@ -750,6 +771,9 @@
                             <string key="keyEquivalent">o</string>
                             <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="outputFolderDialog:" target="Fi2-w9-74K" id="169-lx-hHv"/>
+                        </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="yrx-To-QIb">
                         <rect key="frame" x="152" y="482" width="424" height="17"/>
@@ -805,23 +829,26 @@
                             <string key="keyEquivalent">o</string>
                             <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="outputTXTDialog:" target="Fi2-w9-74K" id="stY-Yc-4Jx"/>
+                        </connections>
                     </button>
                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="0cW-7T-NRt">
                         <rect key="frame" x="20" y="20" width="590" height="194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="fQH-cy-eY9">
-                            <rect key="frame" x="1" y="1" width="573" height="192"/>
+                            <rect key="frame" x="1" y="1" width="588" height="192"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="aL9-Da-3wH">
-                                    <rect key="frame" x="0.0" y="0.0" width="573" height="192"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="588" height="192"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="573" height="192"/>
-                                    <size key="maxSize" width="573" height="10000000"/>
+                                    <size key="minSize" width="588" height="192"/>
+                                    <size key="maxSize" width="590" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="573" height="192"/>
-                                    <size key="maxSize" width="573" height="10000000"/>
+                                    <size key="minSize" width="588" height="192"/>
+                                    <size key="maxSize" width="590" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -831,10 +858,19 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="gLN-TN-iBu">
-                            <rect key="frame" x="574" y="1" width="15" height="192"/>
+                            <rect key="frame" x="573" y="1" width="16" height="192"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zvB-LO-G47">
+                        <rect key="frame" x="152" y="346" width="411" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="TXT" id="6TK-2u-BP4">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>
