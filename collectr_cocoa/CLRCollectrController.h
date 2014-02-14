@@ -19,9 +19,9 @@
     IBOutlet NSTextView * outlutLogTextView;
     IBOutlet NSTextField * createTXTOnlyTextField;
     IBOutlet NSButton * createTXTOnlyCheckBox;
-    
-    CLRCollectr * collecrt;
 }
+
+@property (strong, nonatomic) CLRCollectr * collecrt;
 
 @property BOOL createTXTOnly;
 
