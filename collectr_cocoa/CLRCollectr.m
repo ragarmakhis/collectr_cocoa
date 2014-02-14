@@ -9,8 +9,8 @@
 #import "CLRCollectr.h"
 
 @implementation CLRCollectr
-
-@synthesize volumes, inputXML, typeXML, typeSource, outputFolder, outputTXT;
-@synthesize createTXTOnly;
+//
+//@synthesize volumes, inputXML, typeXML, typeSource, outputFolder, outputTXT;
+//@synthesize createTXTOnly;
 
 @end

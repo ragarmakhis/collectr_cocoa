@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface CLRCollectr : NSObject {
-    NSArray * volumes; //Array of URLs
-    NSURL * inputXML;
-    NSString * typeXML;
-    NSString * typeSource;
-    NSURL * outputFolder;
-    NSURL * outputTXT;
-    BOOL createTXTOnly;
+//    NSArray * volumes; //Array of URLs
+//    NSURL * inputXML;
+//    NSString * typeXML;
+//    NSString * typeSource;
+//    NSURL * outputFolder;
+//    NSURL * outputTXT;
+//    BOOL createTXTOnly;
 }
 
-@property (strong) NSArray *volumes;
+@property (strong) NSArray *volumes; //Array of URLs
 @property (strong) NSURL *inputXML;
 @property (strong) NSString *typeXML;
 @property (strong) NSString *typeSource;

@@ -10,14 +10,14 @@
 
 @implementation CLRCollectrController
 
-@synthesize creareTXTOnly;
-
-- (id) init {
-    if (self = [super init]) {
-        CLRCollectr * collectr = [[CLRCollectr alloc] init];
-    }
-    return self;
-}
+@synthesize createTXTOnly;
+//
+//- (id) init {
+//    if (self = [super init]) {
+//        CLRCollectr * collectr = [[CLRCollectr alloc] init];
+//    }
+//    return self;
+//}
 
 - (IBAction)volumesSelectDialog:(id)sender {
     // Создать диалог
@@ -27,7 +27,7 @@
     [openDlg setCanChooseFiles:NO];
     [openDlg setCanChooseDirectories:YES];
     [openDlg setAllowsMultipleSelection:YES];
-    [openDlg setDirectoryURL:[NSURL URLWithString:@"/Volumes"]];
+    [openDlg setDirectoryURL:[NSURL URLWithString:@"file:///Volumes"]];
 //    [openDlg setResolvesAliases:YES];
     
     // Вывести диалог модально
@@ -131,9 +131,8 @@
 }
 
 - (IBAction)createTXTOnlyCheckBox:(id)sender {
-    self.creareTXTOnly = [self checkCreateTXTOnly];
-    
-    [createTXTOnlyTextField setStringValue:self.creareTXTOnly ? @"YES" : @"NO"];
+    collecrt.createTXTOnly = self.checkCreateTXTOnly;
+    [createTXTOnlyTextField setStringValue:collecrt.createTXTOnly ? @"YES" : @"NO"];
 }
 
 - (IBAction)start:(id)sender {

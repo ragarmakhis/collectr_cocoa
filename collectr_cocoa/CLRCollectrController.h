@@ -21,10 +21,9 @@
     IBOutlet NSButton * createTXTOnlyCheckBox;
     
     CLRCollectr * collecrt;
-    BOOL createTXTOnly;
 }
 
-@property BOOL creareTXTOnly;
+@property BOOL createTXTOnly;
 
 - (IBAction)volumesSelectDialog:(id)sender;
 - (IBAction)inputXMLDialog:(id)sender;
