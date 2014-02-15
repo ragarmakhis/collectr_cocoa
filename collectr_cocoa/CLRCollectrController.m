@@ -10,6 +10,12 @@
 
 @implementation CLRCollectrController
 
+@synthesize collecrt=_collecrt;
+
+- (void)setCollecrt:(CLRCollectr *)collecrt {
+    _collecrt = collecrt;
+}
+
 - (CLRCollectr *)collecrt {
     if (!_collecrt) _collecrt = [[CLRCollectr alloc] init];
     return _collecrt;
@@ -121,16 +127,36 @@
     }
 }
 
-- (BOOL)checkCreateTXTOnly {
-    return [[NSNumber numberWithLong:[createTXTOnlyCheckBox state]] boolValue];
-}
-
 - (IBAction)createTXTOnlyCheckBox:(id)sender {
-    self.collecrt.createTXTOnly = self.checkCreateTXTOnly;
+    self.collecrt.createTXTOnly = [[NSNumber numberWithLong:[createTXTOnlyCheckBox state]] boolValue];
     [createTXTOnlyTextField setStringValue:self.collecrt.createTXTOnly ? @"YES" : @"NO"];
 }
 
 - (IBAction)start:(id)sender {
+    
+    if (!self.collecrt.outputTXT) {
+        self.collecrt.outputTXT = [NSURL fileURLWithPath:[NSString stringWithFormat:@"/tmp/%@.txt", [self.collecrt.inputXML lastPathComponent]]];
+    }
+    [outputLogTextView insertText:[self.collecrt.outputTXT path]];
+    
+    if (!self.collecrt.outputFolder) {
+        self.collecrt.outputFolder = [self.collecrt.inputXML URLByDeletingLastPathComponent];
+    }
+    
+    NSString *xmlPath = @"";
+    if ([self.collecrt.typeXML isEqualToString:@"F"]) {
+        xmlPath = @".//sequence/media/video/track/clipitem/file/name";
+    } else {
+        xmlPath = @".//VideoTrackVec/Element/Sm2TiTrack/Items/Element/Sm2TiVideoClip/MediaReelNumber";
+    }
+    
+    NSString *xmlSearch = @"";
+    if ([self.collecrt.typeSource isEqualToString:@"R"]) {
+        xmlSearch = @"^[A-Z]\d{3}_[A-Z]\d{3}_\d{4}\w{2}";
+    } else {
+        xmlSearch = @"^[A-Z]\d{3}[A-Z]\d{3}_\d{4}\w{2}";
+    }
+    
     
 }
 

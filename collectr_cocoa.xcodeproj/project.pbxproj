@@ -20,6 +20,7 @@
 		084AFB4918A93F9600CD90F4 /* collectr_cocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 084AFB4818A93F9600CD90F4 /* collectr_cocoaTests.m */; };
 		1553758C18AAC184005CF41C /* CLRCollectrController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553758B18AAC184005CF41C /* CLRCollectrController.m */; };
 		155375D318AC2E9C005CF41C /* CLRCollectr.m in Sources */ = {isa = PBXBuildFile; fileRef = 155375D218AC2E9C005CF41C /* CLRCollectr.m */; };
+		155375D518AED133005CF41C /* collectr.py in Resources */ = {isa = PBXBuildFile; fileRef = 155375D418AED133005CF41C /* collectr.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1553758B18AAC184005CF41C /* CLRCollectrController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRCollectrController.m; sourceTree = "<group>"; };
 		155375D118AC2E9C005CF41C /* CLRCollectr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRCollectr.h; sourceTree = "<group>"; };
 		155375D218AC2E9C005CF41C /* CLRCollectr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRCollectr.m; sourceTree = "<group>"; };
+		155375D418AED133005CF41C /* collectr.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = collectr.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		084AFB1218A93F9600CD90F4 = {
 			isa = PBXGroup;
 			children = (
+				155375D418AED133005CF41C /* collectr.py */,
 				084AFB2418A93F9600CD90F4 /* collectr_cocoa */,
 				084AFB4218A93F9600CD90F4 /* collectr_cocoaTests */,
 				084AFB1D18A93F9600CD90F4 /* Frameworks */,
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155375D518AED133005CF41C /* collectr.py in Resources */,
 				084AFB2918A93F9600CD90F4 /* InfoPlist.strings in Resources */,
 				084AFB3718A93F9600CD90F4 /* Images.xcassets in Resources */,
 				084AFB2F18A93F9600CD90F4 /* Credits.rtf in Resources */,

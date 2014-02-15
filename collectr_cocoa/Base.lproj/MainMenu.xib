@@ -16,8 +16,8 @@
                 <outlet property="createTXTOnlyCheckBox" destination="Mxl-Yf-sHf" id="n4O-Fx-K78"/>
                 <outlet property="createTXTOnlyTextField" destination="d0a-wK-wOs" id="iqs-hI-6iH"/>
                 <outlet property="inputXMLTextField" destination="yrx-To-QIb" id="PHC-qk-MUA"/>
-                <outlet property="outlutLogTextView" destination="aL9-Da-3wH" id="Uwd-37-7Iq"/>
                 <outlet property="outputFolderTextField" destination="P93-B6-2tP" id="7HL-Gy-ccA"/>
+                <outlet property="outputLogTextView" destination="aL9-Da-3wH" id="ljz-iQ-Bo4"/>
                 <outlet property="outputTXTTextField" destination="zvB-LO-G47" id="vCA-Qz-YKm"/>
                 <outlet property="typeSourceTextField" destination="GVv-9J-ddQ" id="nxc-vK-rZE"/>
                 <outlet property="typeXMLTextField" destination="3Mq-Ak-7wK" id="2tI-Dq-BZA"/>

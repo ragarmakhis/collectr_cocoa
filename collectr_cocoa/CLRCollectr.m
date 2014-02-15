@@ -13,4 +13,13 @@
 //@synthesize volumes, inputXML, typeXML, typeSource, outputFolder, outputTXT;
 //@synthesize createTXTOnly;
 
+- (id)init {
+    if ((self = [super init])) {
+        self.createTXTOnly = NO;
+        self.typeXML = @"F";
+        self.typeSource = @"R";
+    }
+    return self;
+}
+
 @end

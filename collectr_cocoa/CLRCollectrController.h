@@ -16,14 +16,12 @@
     IBOutlet NSTextField * typeSourceTextField;
     IBOutlet NSTextField * outputFolderTextField;
     IBOutlet NSTextField * outputTXTTextField;
-    IBOutlet NSTextView * outlutLogTextView;
+    IBOutlet NSTextView * outputLogTextView;
     IBOutlet NSTextField * createTXTOnlyTextField;
     IBOutlet NSButton * createTXTOnlyCheckBox;
 }
 
 @property (strong, nonatomic) CLRCollectr * collecrt;
-
-@property BOOL createTXTOnly;
 
 - (IBAction)volumesSelectDialog:(id)sender;
 - (IBAction)inputXMLDialog:(id)sender;
@@ -33,7 +31,5 @@
 - (IBAction)outputTXTDialog:(id)sender;
 - (IBAction)createTXTOnlyCheckBox:(id)sender;
 - (IBAction)start:(id)sender;
-
-- (BOOL)checkCreateTXTOnly;
 
 @end
