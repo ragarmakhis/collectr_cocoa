@@ -134,30 +134,99 @@
 
 - (IBAction)start:(id)sender {
     
-    if (!self.collecrt.outputTXT) {
-        self.collecrt.outputTXT = [NSURL fileURLWithPath:[NSString stringWithFormat:@"/tmp/%@.txt", [self.collecrt.inputXML lastPathComponent]]];
-    }
-    [outputLogTextView insertText:[self.collecrt.outputTXT path]];
+//    if (self.collecrt.inputXML == nil) {
+//        [outputLogTextView insertText:@"No input XML!!!\n\n"];
+//        return;
+//    }
     
-    if (!self.collecrt.outputFolder) {
-        self.collecrt.outputFolder = [self.collecrt.inputXML URLByDeletingLastPathComponent];
+    NSString *xmlFilePath = [[NSBundle mainBundle] pathForResource:@"408-13" ofType:@"xml"];
+//    NSString *xmlFilePath = [[NSBundle mainBundle] pathForResource:@"MyXML" ofType:@"xml"];
+    NSData *xml = [[NSData alloc] initWithContentsOfFile:xmlFilePath];
+//    NSData *xml = [[NSData alloc] initWithContentsOfURL:self.collecrt.inputXML];
+    self.xmlParser = [[NSXMLParser alloc] initWithData:xml];
+    self.xmlParser.delegate = self;
+    if ([self.xmlParser parse]){
+        NSLog(@"The XML is parsed.");
+        
+        /* self.rootElement is now the root element in the XML */
+        CLRXMLElement *element = self.rootElement.subElements[1];
+        NSLog(@"%@", self.rootElement.subElements);
+        NSLog(@"%@", [[element.subElements firstObject] text]);
+    } else{
+        NSLog(@"Failed to parse the XML");
     }
     
-    NSString *xmlPath = @"";
-    if ([self.collecrt.typeXML isEqualToString:@"F"]) {
-        xmlPath = @".//sequence/media/video/track/clipitem/file/name";
+    
+//    if (!self.collecrt.outputTXT) {
+//        self.collecrt.outputTXT = [NSURL fileURLWithPath:[NSString stringWithFormat:@"/tmp/%@.txt", [self.collecrt.inputXML lastPathComponent]]];
+//    }
+//    [outputLogTextView insertText:[self.collecrt.outputTXT path]];
+//    
+//    if (!self.collecrt.outputFolder) {
+//        self.collecrt.outputFolder = [self.collecrt.inputXML URLByDeletingLastPathComponent];
+//    }
+//    
+//    NSString *xmlPath = @"";
+//    if ([self.collecrt.typeXML isEqualToString:@"F"]) {
+//        xmlPath = @".//sequence/media/video/track/clipitem/file/name";
+//    } else {
+//        xmlPath = @".//VideoTrackVec/Element/Sm2TiTrack/Items/Element/Sm2TiVideoClip/MediaReelNumber";
+//    }
+    
+//    NSString *xmlSearch = @"";
+//    if ([self.collecrt.typeSource isEqualToString:@"R"]) {
+//        xmlSearch = @"^[A-Z]\d{3}_[A-Z]\d{3}_\d{4}\w{2}";
+//    } else {
+//        xmlSearch = @"^[A-Z]\d{3}[A-Z]\d{3}_\d{4}\w{2}";
+//    }
+    
+    
+}
+
+-(void)parserDidStartDocument:(NSXMLParser *)parser {
+    self.rootElement = nil;
+    self.currentElementPointer = nil;
+}
+
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
+    
+    if (self.rootElement == nil) {
+        /* We don't have a root element. Create it and point to it */
+        self.rootElement = [[CLRXMLElement alloc] init];
+        self.currentElementPointer = self.rootElement;
     } else {
-        xmlPath = @".//VideoTrackVec/Element/Sm2TiTrack/Items/Element/Sm2TiVideoClip/MediaReelNumber";
+        /* Already have root. Create new element and add it as one of
+         the subelements of the current element */
+        CLRXMLElement *newElement = [[CLRXMLElement alloc] init];
+        newElement.parent = self.currentElementPointer;
+        [self.currentElementPointer.subElements addObject:newElement];
+        self.currentElementPointer = newElement;
     }
+    self.currentElementPointer.name = elementName;
+    self.currentElementPointer.attributes = attributeDict;
     
-    NSString *xmlSearch = @"";
-    if ([self.collecrt.typeSource isEqualToString:@"R"]) {
-        xmlSearch = @"^[A-Z]\d{3}_[A-Z]\d{3}_\d{4}\w{2}";
+    if ([elementName isEqualToString:@"file"]) {
+//        if ([attributeDict isEqualToString:@"id"]) {
+//            NSLog(@"%@", attributeDict);
+//        }
+        NSLog(@"%@", [attributeDict objectForKey:@"id"]);
+    }
+}
+
+-(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    if ([self.currentElementPointer.text length] > 0) {
+        self.currentElementPointer.text = [self.currentElementPointer.text stringByAppendingString:string];
     } else {
-        xmlSearch = @"^[A-Z]\d{3}[A-Z]\d{3}_\d{4}\w{2}";
+        self.currentElementPointer.text = string;
     }
-    
-    
+}
+
+-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    self.currentElementPointer = self.currentElementPointer.parent;
+}
+
+-(void)parserDidEndDocument:(NSXMLParser *)parser {
+    self.currentElementPointer = nil;
 }
 
 @end

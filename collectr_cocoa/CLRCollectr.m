@@ -18,6 +18,7 @@
         self.createTXTOnly = NO;
         self.typeXML = @"F";
         self.typeSource = @"R";
+        self.inputXML = nil;
     }
     return self;
 }

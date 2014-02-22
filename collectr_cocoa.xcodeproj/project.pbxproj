@@ -21,6 +21,9 @@
 		1553758C18AAC184005CF41C /* CLRCollectrController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553758B18AAC184005CF41C /* CLRCollectrController.m */; };
 		155375D318AC2E9C005CF41C /* CLRCollectr.m in Sources */ = {isa = PBXBuildFile; fileRef = 155375D218AC2E9C005CF41C /* CLRCollectr.m */; };
 		155375D518AED133005CF41C /* collectr.py in Resources */ = {isa = PBXBuildFile; fileRef = 155375D418AED133005CF41C /* collectr.py */; };
+		155375D718B8DD4E005CF41C /* MyXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 155375D618B8DD4E005CF41C /* MyXML.xml */; };
+		155375DA18B8E487005CF41C /* CLRXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 155375D918B8E487005CF41C /* CLRXMLElement.m */; };
+		155375DC18B8F5B4005CF41C /* 408-13.xml in Resources */ = {isa = PBXBuildFile; fileRef = 155375DB18B8F5B4005CF41C /* 408-13.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,10 @@
 		155375D118AC2E9C005CF41C /* CLRCollectr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRCollectr.h; sourceTree = "<group>"; };
 		155375D218AC2E9C005CF41C /* CLRCollectr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRCollectr.m; sourceTree = "<group>"; };
 		155375D418AED133005CF41C /* collectr.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = collectr.py; sourceTree = "<group>"; };
+		155375D618B8DD4E005CF41C /* MyXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MyXML.xml; sourceTree = "<group>"; };
+		155375D818B8E487005CF41C /* CLRXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRXMLElement.h; sourceTree = "<group>"; };
+		155375D918B8E487005CF41C /* CLRXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRXMLElement.m; sourceTree = "<group>"; };
+		155375DB18B8F5B4005CF41C /* 408-13.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "408-13.xml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +138,10 @@
 				084AFB2518A93F9600CD90F4 /* Supporting Files */,
 				1553758A18AAC184005CF41C /* CLRCollectrController.h */,
 				1553758B18AAC184005CF41C /* CLRCollectrController.m */,
+				155375DB18B8F5B4005CF41C /* 408-13.xml */,
+				155375D618B8DD4E005CF41C /* MyXML.xml */,
+				155375D818B8E487005CF41C /* CLRXMLElement.h */,
+				155375D918B8E487005CF41C /* CLRXMLElement.m */,
 				155375D118AC2E9C005CF41C /* CLRCollectr.h */,
 				155375D218AC2E9C005CF41C /* CLRCollectr.m */,
 			);
@@ -247,8 +258,10 @@
 				155375D518AED133005CF41C /* collectr.py in Resources */,
 				084AFB2918A93F9600CD90F4 /* InfoPlist.strings in Resources */,
 				084AFB3718A93F9600CD90F4 /* Images.xcassets in Resources */,
+				155375D718B8DD4E005CF41C /* MyXML.xml in Resources */,
 				084AFB2F18A93F9600CD90F4 /* Credits.rtf in Resources */,
 				084AFB3518A93F9600CD90F4 /* MainMenu.xib in Resources */,
+				155375DC18B8F5B4005CF41C /* 408-13.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155375DA18B8E487005CF41C /* CLRXMLElement.m in Sources */,
 				1553758C18AAC184005CF41C /* CLRCollectrController.m in Sources */,
 				155375D318AC2E9C005CF41C /* CLRCollectr.m in Sources */,
 				084AFB3218A93F9600CD90F4 /* CLRAppDelegate.m in Sources */,
