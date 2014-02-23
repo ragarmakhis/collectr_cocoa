@@ -27,6 +27,8 @@
 @property (nonatomic, strong) NSXMLParser *xmlParser;
 @property (nonatomic, strong) CLRXMLElement *rootElement;
 @property (nonatomic, strong) CLRXMLElement *currentElementPointer;
+@property (nonatomic, strong) NSMutableSet *mySet;
+@property (nonatomic, strong) NSMutableArray *myArray;
 
 
 //@property (nonatomic, copy) NSString* name;

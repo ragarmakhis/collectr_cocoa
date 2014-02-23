@@ -12,13 +12,20 @@
 
 @synthesize collecrt=_collecrt;
 
-- (void)setCollecrt:(CLRCollectr *)collecrt {
+	- (void)setCollecrt:(CLRCollectr *)collecrt {
     _collecrt = collecrt;
 }
 
 - (CLRCollectr *)collecrt {
     if (!_collecrt) _collecrt = [[CLRCollectr alloc] init];
     return _collecrt;
+}
+
+- (NSMutableSet *)mySet {
+    if (!_mySet) {
+        _mySet = [[NSMutableSet alloc] init];
+    }
+    return _mySet;
 }
 
 - (IBAction)volumesSelectDialog:(id)sender {
@@ -146,12 +153,18 @@
     self.xmlParser = [[NSXMLParser alloc] initWithData:xml];
     self.xmlParser.delegate = self;
     if ([self.xmlParser parse]){
+//        NSMutableSet *set = [NSMutableSet set];
         NSLog(@"The XML is parsed.");
+        if ([self.currentElementPointer.name isEqualToString:@"file"]) {
+            NSLog(@"%@", self.currentElementPointer.attributes);
+        }
+        NSLog(@"%@", self.mySet);
+        NSLog(@"%@", self.myArray);
         
         /* self.rootElement is now the root element in the XML */
-        CLRXMLElement *element = self.rootElement.subElements[1];
-        NSLog(@"%@", self.rootElement.subElements);
-        NSLog(@"%@", [[element.subElements firstObject] text]);
+//        CLRXMLElement *element = self.rootElement.subElements[1];
+//        NSLog(@"%@", self.rootElement.subElements);
+//        NSLog(@"%@", [[element.subElements firstObject] text]);
     } else{
         NSLog(@"Failed to parse the XML");
     }
@@ -190,6 +203,8 @@
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
+    BOOL video = YES;
+    
     if (self.rootElement == nil) {
         /* We don't have a root element. Create it and point to it */
         self.rootElement = [[CLRXMLElement alloc] init];
@@ -205,11 +220,18 @@
     self.currentElementPointer.name = elementName;
     self.currentElementPointer.attributes = attributeDict;
     
-    if ([elementName isEqualToString:@"file"]) {
-//        if ([attributeDict isEqualToString:@"id"]) {
-//            NSLog(@"%@", attributeDict);
-//        }
+//    if ([elementName isEqualToString:@"video"]) {
+//        video = YES;
+//    }
+    
+    if ([elementName isEqualToString:@"file"] && video) {
+        //        if ([attributeDict isEqualToString:@"id"]) {
+        //            NSLog(@"%@", attributeDict);
+        //        }
+        [self.mySet addObject:[attributeDict objectForKey:@"id"]];
+        [self.myArray addObject:[attributeDict objectForKey:@"id"]];
         NSLog(@"%@", [attributeDict objectForKey:@"id"]);
+        video = NO;
     }
 }
 
