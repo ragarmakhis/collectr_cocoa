@@ -203,7 +203,7 @@
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
-    BOOL video = YES;
+//    BOOL video = YES;
     
     if (self.rootElement == nil) {
         /* We don't have a root element. Create it and point to it */
@@ -223,16 +223,20 @@
 //    if ([elementName isEqualToString:@"video"]) {
 //        video = YES;
 //    }
-    
-    if ([elementName isEqualToString:@"file"] && video) {
-        //        if ([attributeDict isEqualToString:@"id"]) {
-        //            NSLog(@"%@", attributeDict);
-        //        }
-        [self.mySet addObject:[attributeDict objectForKey:@"id"]];
-        [self.myArray addObject:[attributeDict objectForKey:@"id"]];
-        NSLog(@"%@", [attributeDict objectForKey:@"id"]);
-        video = NO;
+    if ([self.currentElementPointer.name isEqualToString:@"name"] && [self.currentElementPointer.parent.name isEqualToString:@"file"]) {
+        [self.mySet addObject:[self.currentElementPointer.parent.attributes objectForKey:@"id"]];
+//        NSLog(@"%@", self.currentElementPointer.text);
     }
+    
+//    if ([elementName isEqualToString:@"file"]) {
+//        //        if ([attributeDict isEqualToString:@"id"]) {
+//        //            NSLog(@"%@", attributeDict);
+//        //        }
+//        [self.mySet addObject:[attributeDict objectForKey:@"id"]];
+//        [self.myArray addObject:[attributeDict objectForKey:@"id"]];
+//        NSLog(@"%@", [attributeDict objectForKey:@"id"]);
+////        video = NO;
+//    }
 }
 
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
