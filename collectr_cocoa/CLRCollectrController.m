@@ -8,11 +8,25 @@
 
 #import "CLRCollectrController.h"
 
+@interface CLRCollectrController() {
+    BOOL isVideo;
+}
+
+@end
+
 @implementation CLRCollectrController
 
 @synthesize collecrt=_collecrt;
 
-	- (void)setCollecrt:(CLRCollectr *)collecrt {
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        isVideo = NO;
+    }
+    return self;
+}
+
+- (void)setCollecrt:(CLRCollectr *)collecrt {
     _collecrt = collecrt;
 }
 
@@ -203,7 +217,7 @@
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
-//    BOOL video = YES;
+//    isVideo = YES;
     
     if (self.rootElement == nil) {
         /* We don't have a root element. Create it and point to it */
@@ -220,13 +234,13 @@
     self.currentElementPointer.name = elementName;
     self.currentElementPointer.attributes = attributeDict;
     
-//    if ([elementName isEqualToString:@"video"]) {
-//        video = YES;
-//    }
-    if ([self.currentElementPointer.name isEqualToString:@"name"] && [self.currentElementPointer.parent.name isEqualToString:@"file"]) {
-        [self.mySet addObject:[self.currentElementPointer.parent.attributes objectForKey:@"id"]];
-//        NSLog(@"%@", self.currentElementPointer.text);
+    if ([elementName isEqualToString:@"video"]) {
+        isVideo = YES;
     }
+//    if ([self.currentElementPointer.name isEqualToString:@"name"] && [self.currentElementPointer.parent.name isEqualToString:@"file"]) {
+//        [self.mySet addObject:[self.currentElementPointer.parent.attributes objectForKey:@"id"]];
+////        NSLog(@"%@", self.currentElementPointer.text);
+//    }
     
 //    if ([elementName isEqualToString:@"file"]) {
 //        //        if ([attributeDict isEqualToString:@"id"]) {
@@ -249,6 +263,15 @@
 
 -(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     self.currentElementPointer = self.currentElementPointer.parent;
+
+    if ([elementName isEqualToString:@"video"]) {
+        isVideo = NO;
+    }
+    
+    if ([elementName isEqualToString:@"file"] && isVideo) {
+        [self.mySet addObject:self.currentElementPointer.text];
+    }
+    
 }
 
 -(void)parserDidEndDocument:(NSXMLParser *)parser {
