@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CLRCollectr : NSObject {
+@interface CLRCollectr : NSObject <NSXMLParserDelegate> {
 //    NSArray * volumes; //Array of URLs
 //    NSURL * inputXML;
 //    NSString * typeXML;
@@ -25,5 +25,10 @@
 @property (strong) NSURL *outputFolder;
 @property (strong) NSURL *outputTXT;
 @property BOOL createTXTOnly;
+@property (nonatomic, strong) NSMutableSet *mySet;
+
+-(void)parseXML;
+-(void)copingSources;
+-(void)copyURL:(NSURL *)url;
 
 @end

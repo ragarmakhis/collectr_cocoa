@@ -18,6 +18,7 @@
 		084AFB3F18A93F9600CD90F4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084AFB1E18A93F9600CD90F4 /* Cocoa.framework */; };
 		084AFB4718A93F9600CD90F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 084AFB4518A93F9600CD90F4 /* InfoPlist.strings */; };
 		084AFB4918A93F9600CD90F4 /* collectr_cocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 084AFB4818A93F9600CD90F4 /* collectr_cocoaTests.m */; };
+		08FC506F18C0BED000AD80A6 /* project.xml in Resources */ = {isa = PBXBuildFile; fileRef = 08FC506E18C0BED000AD80A6 /* project.xml */; };
 		1553758C18AAC184005CF41C /* CLRCollectrController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553758B18AAC184005CF41C /* CLRCollectrController.m */; };
 		155375D318AC2E9C005CF41C /* CLRCollectr.m in Sources */ = {isa = PBXBuildFile; fileRef = 155375D218AC2E9C005CF41C /* CLRCollectr.m */; };
 		155375D518AED133005CF41C /* collectr.py in Resources */ = {isa = PBXBuildFile; fileRef = 155375D418AED133005CF41C /* collectr.py */; };
@@ -56,6 +57,7 @@
 		084AFB4418A93F9600CD90F4 /* collectr_cocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "collectr_cocoaTests-Info.plist"; sourceTree = "<group>"; };
 		084AFB4618A93F9600CD90F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		084AFB4818A93F9600CD90F4 /* collectr_cocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collectr_cocoaTests.m; sourceTree = "<group>"; };
+		08FC506E18C0BED000AD80A6 /* project.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = project.xml; sourceTree = "<group>"; };
 		1553758A18AAC184005CF41C /* CLRCollectrController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRCollectrController.h; sourceTree = "<group>"; };
 		1553758B18AAC184005CF41C /* CLRCollectrController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRCollectrController.m; sourceTree = "<group>"; };
 		155375D118AC2E9C005CF41C /* CLRCollectr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRCollectr.h; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		084AFB2418A93F9600CD90F4 /* collectr_cocoa */ = {
 			isa = PBXGroup;
 			children = (
+				08FC506E18C0BED000AD80A6 /* project.xml */,
 				084AFB3018A93F9600CD90F4 /* CLRAppDelegate.h */,
 				084AFB3118A93F9600CD90F4 /* CLRAppDelegate.m */,
 				084AFB3318A93F9600CD90F4 /* MainMenu.xib */,
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				155375D518AED133005CF41C /* collectr.py in Resources */,
+				08FC506F18C0BED000AD80A6 /* project.xml in Resources */,
 				084AFB2918A93F9600CD90F4 /* InfoPlist.strings in Resources */,
 				084AFB3718A93F9600CD90F4 /* Images.xcassets in Resources */,
 				155375D718B8DD4E005CF41C /* MyXML.xml in Resources */,

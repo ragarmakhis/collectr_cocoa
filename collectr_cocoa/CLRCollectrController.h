@@ -24,21 +24,6 @@
 
 @property (strong, nonatomic) CLRCollectr * collecrt;
 
-@property (nonatomic, strong) NSXMLParser *xmlParser;
-@property (nonatomic, strong) CLRXMLElement *rootElement;
-@property (nonatomic, strong) CLRXMLElement *currentElementPointer;
-@property (nonatomic, strong) NSMutableSet *mySet;
-@property (nonatomic, strong) NSMutableArray *myArray;
-
-
-//@property (nonatomic, copy) NSString* name;
-//@property (nonatomic, strong) NSMutableString* text;
-//@property (nonatomic, weak) CLRCollectrController* parent;
-//@property (nonatomic, strong) CLRCollectrController* child;
-//- (void)start: (NSString*) elementName parent: (id) parent;
-//- (void)makeChild:(Class)class elementName:(NSString*)elementName parser:(NSXMLParser*)parser;
-//- (void)finishedChild:(NSString*)s;
-
 - (IBAction)volumesSelectDialog:(id)sender;
 - (IBAction)inputXMLDialog:(id)sender;
 - (IBAction)typeXMLSelect:(id)sender;
