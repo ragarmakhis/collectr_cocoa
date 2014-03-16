@@ -38,13 +38,13 @@
 
 -(void)parseXML {
     self.mySet = nil;
-    NSData *xml = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"project" ofType:@"xml"]];
+//    NSData *xml = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"project" ofType:@"xml"]];
 //    NSData *xml = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"408-13" ofType:@"xml"]];
-//    if (self.inputXML == nil) {
-//        NSLog(@"No input XML!!!");
-//        return;
-//    }
-//    NSData *xml = [[NSData alloc] initWithContentsOfURL:self.inputXML];
+    if (self.inputXML == nil) {
+        NSLog(@"No input XML!!!");
+        return;
+    }
+    NSData *xml = [[NSData alloc] initWithContentsOfURL:self.inputXML];
 
     
 //    if (parser) [parser release]; // ARC forbids explicit message send of 'release'
@@ -129,10 +129,12 @@
                 if ([[url lastPathComponent] isEqualToString:[reelName stringByAppendingString:@".RDC"]]) {
                     NSLog(@"%@ - BINGO", [url path]);
                     if (self.outputFolder) {
-                        [localFileManager copyItemAtURL:url toURL:self.outputFolder error:&error];
+                        if (![localFileManager copyItemAtURL:url toURL:[self.outputFolder URLByAppendingPathComponent:url.lastPathComponent] error:&error]) {
+                                NSLog(@"%@", [error localizedDescription]);
+                            continue;
+                        }
                         NSLog(@"from %@ to %@", [url path], [self.outputFolder path]);
-                        NSLog(@"%@", [error localizedDescription]);
-                        NSLog(@"copyng");
+                        NSLog(@"copied");
                     }
                 }
             }
