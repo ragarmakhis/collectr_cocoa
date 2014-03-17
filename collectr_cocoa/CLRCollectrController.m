@@ -51,7 +51,7 @@
     [openDlg setCanChooseFiles:YES];
     [openDlg setCanChooseDirectories:NO];
     [openDlg setAllowsMultipleSelection:NO];
-    [openDlg setAllowedFileTypes:[NSArray arrayWithObject:@"xml"]];
+    [openDlg setAllowedFileTypes:[NSArray arrayWithObjects:@"xml", nil]];
     
     
     // Вывести диалог модально

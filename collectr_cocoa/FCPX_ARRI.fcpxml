@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.3">
+    <project name="Untitled Project" uid="6DE7ADE0-B97F-4A60-BBC6-79A5E0A9A68F" eventID="26DB88C9-248D-429A-874E-F93A980DB2EC" location="file:///Users/maksimroshtshin/Movies/Macintosh%20HD's%20projects%20and%20events.fcpbundle/%20Updated%20Projects/Untitled%20Project/">
+        <resources>
+            <format id="r1" name="FFVideoFormat2048x1536p25" frameDuration="100/2500s" width="2048" height="1536"/>
+            <projectRef id="r2" name="New Event 17.11.13" uid="4407E5A0-8D6A-4210-BB6C-B02DE3DC56FA"/>
+            <asset id="r3" name="J001C074_140110_R6MS" uid="92977565C659D489D52CF7B0D4944FF5" projectRef="r2" src="file:///Users/maksimroshtshin/Documents/J001C074_140110_R6MS.mov" start="134904/25s" duration="328/25s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+                <bookmark>Ym9va9wCAAAAAAQQMAAAACSltmmeD7pBTNCU7JwVncHj1tVpM+krXkBiXkKjeyWawAEAAAUAAAABAQAAVXNlcnMAAAAPAAAAAQEAAG1ha3NpbXJvc2h0c2hpbgAJAAAAAQEAAERvY3VtZW50cwAAABgAAAABAQAASjAwMUMwNzRfMTQwMTEwX1I2TVMubW92EAAAAAEGAAAEAAAAFAAAACwAAABAAAAACAAAAAQDAADLZAIAAAAAAAgAAAAEAwAAzCQGAAAAAAAIAAAABAMAAIIwBgAAAAAACAAAAAQDAABa8B8AAAAAABAAAAABBgAAeAAAAIgAAACYAAAAqAAAAAgAAAAABAAAQbiamPAAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAABAAAACAAAAAQDAAACAAAAAAAAAAQAAAADAwAA9QEAAAMAAAABAQAATWFjAAgAAAAEAwAAAIDSjdEBAAAIAAAAAAQAAEG4zS+9AAAAJAAAAAEBAAA0MjVGQUQzQy0xRjFCLTM2QTEtQjQ2My0zQzA3QzM0MTU2MjcYAAAAAQIAAIEAAAABAAgA7xcAAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAAQAAAADAwAAAAgAKOQAAAD+////AQAAAAAAAAASAAAABBAAAGAAAAAAAAAABRAAALgAAAAAAAAAEBAAAOAAAAAAAAAAQBAAANAAAAAAAAAAVBAAAAgBAAAAAAAAVRAAAAgBAAAAAAAAVhAAAAABAAAAAAAAAiAAAKgBAAAAAAAAECAAADABAAAAAAAAESAAAFwBAAAAAAAAEiAAADwBAAAAAAAAEyAAAEwBAAAAAAAAICAAAIgBAAAAAAAAMCAAAAABAAAAAAAAAcAAABQBAAAAAAAAEcAAABQAAAAAAAAAEsAAACQBAAAAAAAAENAAALQBAAAAAAAA</bookmark>
+                <metadata>
+                    <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                        <array>
+                            <string>Apple ProRes 422 (HQ)</string>
+                            <string>Linear PCM</string>
+                        </array>
+                    </md>
+                    <md key="com.apple.proapps.mio.ingestDate" value="2014-03-18 00:17:17 +0400"/>
+                </metadata>
+            </asset>
+            <asset id="r4" name="J001C071_140110_R6MS" uid="DE71809FD2F0216AF187FA8C911A3056" projectRef="r2" src="file:///Users/maksimroshtshin/Documents/J001C071_140110_R6MS.mov" start="131607/25s" duration="306/25s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+                <bookmark>Ym9va9wCAAAAAAQQMAAAADaXTtd7bBdIcSxQdWxkDdQ+AAiXJ8wyfoBZJJ9LaYEGwAEAAAUAAAABAQAAVXNlcnMAAAAPAAAAAQEAAG1ha3NpbXJvc2h0c2hpbgAJAAAAAQEAAERvY3VtZW50cwAAABgAAAABAQAASjAwMUMwNzFfMTQwMTEwX1I2TVMubW92EAAAAAEGAAAEAAAAFAAAACwAAABAAAAACAAAAAQDAADLZAIAAAAAAAgAAAAEAwAAzCQGAAAAAAAIAAAABAMAAIIwBgAAAAAACAAAAAQDAABY8B8AAAAAABAAAAABBgAAeAAAAIgAAACYAAAAqAAAAAgAAAAABAAAQbial0wAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAABAAAACAAAAAQDAAACAAAAAAAAAAQAAAADAwAA9QEAAAMAAAABAQAATWFjAAgAAAAEAwAAAIDSjdEBAAAIAAAAAAQAAEG4zS+9AAAAJAAAAAEBAAA0MjVGQUQzQy0xRjFCLTM2QTEtQjQ2My0zQzA3QzM0MTU2MjcYAAAAAQIAAIEAAAABAAgA7xcAAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAAQAAAADAwAAAAgAKOQAAAD+////AQAAAAAAAAASAAAABBAAAGAAAAAAAAAABRAAALgAAAAAAAAAEBAAAOAAAAAAAAAAQBAAANAAAAAAAAAAVBAAAAgBAAAAAAAAVRAAAAgBAAAAAAAAVhAAAAABAAAAAAAAAiAAAKgBAAAAAAAAECAAADABAAAAAAAAESAAAFwBAAAAAAAAEiAAADwBAAAAAAAAEyAAAEwBAAAAAAAAICAAAIgBAAAAAAAAMCAAAAABAAAAAAAAAcAAABQBAAAAAAAAEcAAABQAAAAAAAAAEsAAACQBAAAAAAAAENAAALQBAAAAAAAA</bookmark>
+                <metadata>
+                    <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                        <array>
+                            <string>Apple ProRes 4444</string>
+                            <string>Linear PCM</string>
+                        </array>
+                    </md>
+                    <md key="com.apple.proapps.mio.ingestDate" value="2014-03-18 00:17:17 +0400"/>
+                </metadata>
+            </asset>
+            <asset id="r5" name="J001C072_140110_R6MS" uid="9E299556DEEE1939F09ED98C1DC95193" projectRef="r2" src="file:///Users/maksimroshtshin/Documents/J001C072_140110_R6MS.mov" start="132895/25s" duration="276/25s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+                <bookmark>Ym9va9wCAAAAAAQQMAAAAC7uNWNfHpK/cBgR3YZJn1valp1DMxd5qP2bBGeSS9PWwAEAAAUAAAABAQAAVXNlcnMAAAAPAAAAAQEAAG1ha3NpbXJvc2h0c2hpbgAJAAAAAQEAAERvY3VtZW50cwAAABgAAAABAQAASjAwMUMwNzJfMTQwMTEwX1I2TVMubW92EAAAAAEGAAAEAAAAFAAAACwAAABAAAAACAAAAAQDAADLZAIAAAAAAAgAAAAEAwAAzCQGAAAAAAAIAAAABAMAAIIwBgAAAAAACAAAAAQDAABZ8B8AAAAAABAAAAABBgAAeAAAAIgAAACYAAAAqAAAAAgAAAAABAAAQbial8QAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAABAAAACAAAAAQDAAACAAAAAAAAAAQAAAADAwAA9QEAAAMAAAABAQAATWFjAAgAAAAEAwAAAIDSjdEBAAAIAAAAAAQAAEG4zS+9AAAAJAAAAAEBAAA0MjVGQUQzQy0xRjFCLTM2QTEtQjQ2My0zQzA3QzM0MTU2MjcYAAAAAQIAAIEAAAABAAgA7xcAAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAAQAAAADAwAAAAgAKOQAAAD+////AQAAAAAAAAASAAAABBAAAGAAAAAAAAAABRAAALgAAAAAAAAAEBAAAOAAAAAAAAAAQBAAANAAAAAAAAAAVBAAAAgBAAAAAAAAVRAAAAgBAAAAAAAAVhAAAAABAAAAAAAAAiAAAKgBAAAAAAAAECAAADABAAAAAAAAESAAAFwBAAAAAAAAEiAAADwBAAAAAAAAEyAAAEwBAAAAAAAAICAAAIgBAAAAAAAAMCAAAAABAAAAAAAAAcAAABQBAAAAAAAAEcAAABQAAAAAAAAAEsAAACQBAAAAAAAAENAAALQBAAAAAAAA</bookmark>
+                <metadata>
+                    <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                        <array>
+                            <string>Apple ProRes 4444</string>
+                            <string>Linear PCM</string>
+                        </array>
+                    </md>
+                    <md key="com.apple.proapps.mio.ingestDate" value="2014-03-18 00:17:17 +0400"/>
+                </metadata>
+            </asset>
+            <asset id="r6" name="J001C073_140110_R6MS" uid="E0C9DB1FBDE01936674AF231ACD2577F" projectRef="r2" src="file:///Users/maksimroshtshin/Documents/J001C073_140110_R6MS.mov" start="134095/25s" duration="277/25s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+                <bookmark>Ym9va9wCAAAAAAQQMAAAAFuBBRIYdh6ymd3Dgf2L/6f3mT3St073bJq2qItptbkMwAEAAAUAAAABAQAAVXNlcnMAAAAPAAAAAQEAAG1ha3NpbXJvc2h0c2hpbgAJAAAAAQEAAERvY3VtZW50cwAAABgAAAABAQAASjAwMUMwNzNfMTQwMTEwX1I2TVMubW92EAAAAAEGAAAEAAAAFAAAACwAAABAAAAACAAAAAQDAADLZAIAAAAAAAgAAAAEAwAAzCQGAAAAAAAIAAAABAMAAIIwBgAAAAAACAAAAAQDAABH8B8AAAAAABAAAAABBgAAeAAAAIgAAACYAAAAqAAAAAgAAAAABAAAQbjXfsYAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAABAAAACAAAAAQDAAACAAAAAAAAAAQAAAADAwAA9QEAAAMAAAABAQAATWFjAAgAAAAEAwAAAIDSjdEBAAAIAAAAAAQAAEG4zS+9AAAAJAAAAAEBAAA0MjVGQUQzQy0xRjFCLTM2QTEtQjQ2My0zQzA3QzM0MTU2MjcYAAAAAQIAAIEAAAABAAgA7xcAAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAAQAAAADAwAAAAgAKOQAAAD+////AQAAAAAAAAASAAAABBAAAGAAAAAAAAAABRAAALgAAAAAAAAAEBAAAOAAAAAAAAAAQBAAANAAAAAAAAAAVBAAAAgBAAAAAAAAVRAAAAgBAAAAAAAAVhAAAAABAAAAAAAAAiAAAKgBAAAAAAAAECAAADABAAAAAAAAESAAAFwBAAAAAAAAEiAAADwBAAAAAAAAEyAAAEwBAAAAAAAAICAAAIgBAAAAAAAAMCAAAAABAAAAAAAAAcAAABQBAAAAAAAAEcAAABQAAAAAAAAAEsAAACQBAAAAAAAAENAAALQBAAAAAAAA</bookmark>
+                <metadata>
+                    <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                        <array>
+                            <string>Apple ProRes 422 (HQ)</string>
+                            <string>Linear PCM</string>
+                        </array>
+                    </md>
+                    <md key="com.apple.proapps.mio.ingestDate" value="2014-03-18 00:17:17 +0400"/>
+                </metadata>
+            </asset>
+        </resources>
+        <sequence duration="118700/2500s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+            <spine>
+                <clip offset="0s" name="J001C074_140110_R6MS" duration="32800/2500s" start="134904/25s" tcFormat="NDF">
+                    <video offset="13490400/2500s" ref="r3" duration="32800/2500s" start="13490400/2500s">
+                        <audio lane="-1" offset="259015680/48000s" ref="r3" duration="629760/48000s" start="259015680/48000s" role="dialogue" srcCh="1, 2"/>
+                    </video>
+                    <metadata>
+                        <md key="com.apple.proapps.studio.reel" value="J001R6MS"/>
+                    </metadata>
+                </clip>
+                <clip offset="32800/2500s" name="J001C071_140110_R6MS" duration="30600/2500s" start="131607/25s" tcFormat="NDF">
+                    <video offset="13160700/2500s" ref="r4" duration="30600/2500s" start="13160700/2500s">
+                        <audio lane="-1" offset="252685440/48000s" ref="r4" duration="587520/48000s" start="252685440/48000s" role="dialogue" srcCh="1, 2"/>
+                    </video>
+                    <metadata>
+                        <md key="com.apple.proapps.studio.reel" value="J001R6MS"/>
+                    </metadata>
+                </clip>
+                <clip offset="63400/2500s" name="J001C072_140110_R6MS" duration="27600/2500s" start="132895/25s" tcFormat="NDF">
+                    <video offset="13289500/2500s" ref="r5" duration="27600/2500s" start="13289500/2500s">
+                        <audio lane="-1" offset="255158400/48000s" ref="r5" duration="529920/48000s" start="255158400/48000s" role="dialogue" srcCh="1, 2"/>
+                    </video>
+                    <metadata>
+                        <md key="com.apple.proapps.studio.reel" value="J001R6MS"/>
+                    </metadata>
+                </clip>
+                <clip offset="91000/2500s" name="J001C073_140110_R6MS" duration="27700/2500s" start="134095/25s" tcFormat="NDF">
+                    <video offset="13409500/2500s" ref="r6" duration="27700/2500s" start="13409500/2500s">
+                        <audio lane="-1" offset="257462400/48000s" ref="r6" duration="531840/48000s" start="257462400/48000s" role="dialogue" srcCh="1, 2"/>
+                    </video>
+                    <metadata>
+                        <md key="com.apple.proapps.studio.reel" value="J001R6MS"/>
+                    </metadata>
+                </clip>
+            </spine>
+        </sequence>
+    </project>
+</fcpxml>
