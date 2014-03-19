@@ -7,6 +7,8 @@
 //
 
 #import "CLRCollectrController.h"
+#import "ZipFile.h"
+#import "FileInZipInfo.h"
 
 @implementation CLRCollectrController
 
@@ -60,6 +62,24 @@
         
         // Список выбранных файлов
         NSArray *URLs = [openDlg URLs];
+        if ([[[[URLs firstObject] lastPathComponent] pathExtension] isEqualToString:@"drp"]) {
+            ZipFile *unzipFile= [[ZipFile alloc] initWithFileName:@"test.zip" mode:ZipFileModeUnzip];
+            
+            NSArray *infos= [unzipFile listFileInZipInfos];
+            for (FileInZipInfo *info in infos) {
+                NSLog(@"- %@ %@ %lu (%d)", info.name, info.date, (unsigned long)info.size,
+                      info.level);
+                
+                // Locate the file in the zip
+                [unzipFile locateFileInZip:info.name];
+                
+                // Expand the file in memory
+                ZipReadStream *read= [unzipFile readCurrentFileInZip];
+                NSMutableData *data= [[NSMutableData alloc] initWithLength:256];
+                int bytesRead= [read readDataWithBuffer:data];
+                [read finishedReading];
+            }
+        }
         self.collecrt.inputXML = [URLs firstObject];
         
         // Показать выбранные файлы

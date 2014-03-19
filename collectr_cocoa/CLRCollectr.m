@@ -89,6 +89,8 @@
         self.typeXML = @"D";
     } else if ([elementName isEqualToString:@"xmeml"]) {
         self.typeXML = @"F";
+    } else if ([elementName isEqualToString:@"fcpxml"]) {
+        self.typeXML = @"FCPX";
     }
     
     if ([self.typeXML isEqualToString:@"F"]) {
